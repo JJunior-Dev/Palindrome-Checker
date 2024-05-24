@@ -46,11 +46,19 @@ h1 {
     border: none;
 }
 
-p {
+.description {
     font-size: 20px;
     background-color: forestgreen;
     width: 400px;
     padding: 25px;
     border-radius: 20px;
     text-align: justify;
+}
+
+.valid {
+    color: green;
+}
+
+.invalid {
+    color: red;
 }
