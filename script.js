@@ -2,9 +2,9 @@ const textInput = document.getElementById('text-input');
 const checkButton = document.getElementById('check-btn');
 const result = document.getElementById('result');
 
-checkButton.addEventListener('click', () => {
+function validateInput() {
   const value = textInput.value;
-
+  
   if (value === '') {
     alert('Please input a value');
   } else if (value.length === 1) {
@@ -21,4 +21,15 @@ checkButton.addEventListener('click', () => {
       textInput.value = '';
     }
   }
+};
+
+checkButton.addEventListener('click', validateInput)
+textInput.addEventListener('keyup', (e) => {
+  const word = e.target.value;
+  const key = e.which || e.keyCode;
+  const isEnterKeyPressed = key === 13;
+  if (isEnterKeyPressed) {
+      validateInput(word)
+      e.target.value = '';
+  };
 });
