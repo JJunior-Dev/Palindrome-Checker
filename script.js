@@ -4,8 +4,8 @@ const result = document.getElementById("result");
 
 function validateInput() {
   const value = textInput.value;
-  const lowerReplaced = value.toLowerCase().replace(/[^a-z0-9]/g, "");
-  const reversed = [...lowerReplaced].reverse().join("");
+  const lowerReplaced = value.toLowerCase().replace(/[^a-z0-9]/g, '');
+  const reversed = [...lowerReplaced].reverse().join('');
 
   if (value === '' || value === ' ') {
     alert("Please input a value");
